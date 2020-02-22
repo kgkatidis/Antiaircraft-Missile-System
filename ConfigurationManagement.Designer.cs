@@ -38,6 +38,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.Lime;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "TWT 224704886",
@@ -46,39 +47,41 @@
             "TWT 224704895",
             "TWT 224704900",
             "TWT 224704903"});
-            this.comboBox1.Location = new System.Drawing.Point(413, 222);
+            this.comboBox1.Location = new System.Drawing.Point(386, 210);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(182, 24);
             this.comboBox1.TabIndex = 0;
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.Lime;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "TWT 224704886",
-            "TWT 224704890",
-            "TWT 224704891",
-            "TWT 224704895",
-            "TWT 224704900",
-            "TWT 224704903"});
-            this.comboBox2.Location = new System.Drawing.Point(413, 329);
+            "Power Supply 0912",
+            "Power Supply 0914",
+            "Power Supply 0915",
+            "Power Supply 0921",
+            "Power Supply 0930",
+            "Power Supply 0944"});
+            this.comboBox2.Location = new System.Drawing.Point(386, 323);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.Size = new System.Drawing.Size(182, 24);
             this.comboBox2.TabIndex = 1;
             // 
             // comboBox3
             // 
+            this.comboBox3.BackColor = System.Drawing.Color.Lime;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "TWT 224704886",
-            "TWT 224704890",
-            "TWT 224704891",
-            "TWT 224704895",
-            "TWT 224704900",
-            "TWT 224704903"});
-            this.comboBox3.Location = new System.Drawing.Point(413, 446);
+            "CCA 114722430",
+            "CCA 114723998",
+            "CCA 114733890",
+            "CCA 114778390",
+            "CCA 114778392",
+            "CCA 114794541"});
+            this.comboBox3.Location = new System.Drawing.Point(386, 434);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox3.Size = new System.Drawing.Size(182, 24);
             this.comboBox3.TabIndex = 2;
             // 
             // label5
@@ -119,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(1006, 681);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);

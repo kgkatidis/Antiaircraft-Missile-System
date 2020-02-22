@@ -48,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper.cs" />
+    <Compile Include="SystemAdjustments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemAdjustments.Designer.cs">
+      <DependentUpon>SystemAdjustments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScen.cs" />
     <Compile Include="ConfigurationManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceContrrolSystem.resx">
       <DependentUpon>MaintenanceContrrolSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemAdjustments.resx">
+      <DependentUpon>SystemAdjustments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TacticalScenarios.resx">
       <DependentUpon>TacticalScenarios.cs</DependentUpon>

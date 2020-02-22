@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.startGameBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label6
@@ -99,9 +101,9 @@
             // 
             this.label3.Font = new System.Drawing.Font("Mistral", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(893, 632);
+            this.label3.Location = new System.Drawing.Point(859, 568);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 51);
+            this.label3.Size = new System.Drawing.Size(147, 115);
             this.label3.TabIndex = 16;
             this.label3.Text = "by Gkat";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,10 +114,11 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(392, 459);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 31);
+            this.label2.Size = new System.Drawing.Size(212, 88);
             this.label2.TabIndex = 15;
             this.label2.Text = "Enjoy The Game";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -139,6 +142,11 @@
             this.startGameBtn.Text = "Start Game";
             this.startGameBtn.UseVisualStyleBackColor = true;
             this.startGameBtn.Click += new System.EventHandler(this.startGameBtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -174,6 +182,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button startGameBtn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

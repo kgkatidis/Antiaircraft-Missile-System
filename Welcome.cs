@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -32,6 +33,17 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+                
         }
     }
 }
