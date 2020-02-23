@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class MainScen
+    public class MainScen
     {
-        private int problem;
-        Boolean solved;
+        public int problem;
+        public Boolean solved;
+        public Random rand;
 
         public MainScen()
         {
-            Random rand = new Random();
+            rand = new Random();
             problem = rand.Next(0, 2);             // a random problem to solve the technician
             solved = false;
         }

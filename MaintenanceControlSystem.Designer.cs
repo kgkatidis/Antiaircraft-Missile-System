@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class MaintenanceContrrolSystem
+    partial class MaintenanceControlSystem
     {
         /// <summary>
         /// Required designer variable.
@@ -59,9 +59,9 @@
             "Computer Diagnostics",
             "Configuration Management",
             "System Adjustments"});
-            this.checkedListBox1.Location = new System.Drawing.Point(323, 217);
+            this.checkedListBox1.Location = new System.Drawing.Point(324, 201);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(325, 145);
+            this.checkedListBox1.Size = new System.Drawing.Size(357, 145);
             this.checkedListBox1.TabIndex = 21;
             this.checkedListBox1.ThreeDCheckBoxes = true;
             // 
@@ -95,7 +95,7 @@
             this.diagnosticsTimer.Interval = 500;
             this.diagnosticsTimer.Tick += new System.EventHandler(this.diagnosticsTimer_Tick);
             // 
-            // MaintenanceContrrolSystem
+            // MaintenanceControlSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.runBtn);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.title);
-            this.Name = "MaintenanceContrrolSystem";
+            this.Name = "MaintenanceControlSystem";
             this.Text = "Maintenance Control System";
             this.ResumeLayout(false);
 

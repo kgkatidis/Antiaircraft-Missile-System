@@ -10,6 +10,7 @@ C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFo
 C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TacticalScenarios.resources
-C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MaintenanceContrrolSystem.resources
 C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ConfigurationManagement.resources
 C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SystemAdjustments.resources
+C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MaintenanceControlSystem.resources
+C:\Users\gkat\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Bibliography.resources

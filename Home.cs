@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
             else if (!tacticalCheck.Checked && maintenanceCheck.Checked)
             {
                 this.Hide();
-                var frm = new MaintenanceContrrolSystem();
+                var frm = new MaintenanceControlSystem();
                 frm.Show();
             }
             else if (!tacticalCheck.Checked && !maintenanceCheck.Checked)

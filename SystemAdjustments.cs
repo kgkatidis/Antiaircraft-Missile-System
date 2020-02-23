@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
         private int r4;
         private int r5;
         private int r6;
+        private MaintenanceControlSystem frmMCS;
+        private MainScen mainScen;
 
         public SystemAdjustments()
         {
@@ -26,12 +28,59 @@ namespace WindowsFormsApp1
             adjTimer.Start();
             adjTimer.Enabled = true;
         }
+        public SystemAdjustments(MainScen mS)
+        {
+            InitializeComponent();
+            adjTimer.Start();
+            adjTimer.Enabled = true;
+            mainScen = mS;
+            frmMCS = new MaintenanceControlSystem(mainScen);
+        }
 
+        public Label getAdj(int i)
+        {
+            switch (i)
+            {
+                case 1:
+                    {
+                        return adj1;
+                        break;
+                    }
+                case 2:
+                    {
+                        return adj2;
+                        break;
+                    }
+                case 3:
+                    {
+                        return adj3;
+                        break;
+                    }
+                case 4:
+                    {
+                        return adj4;
+                        break;
+                    }
+                case 5:
+                    {
+                        return adj5;
+                        break;
+                    }
+                case 6:
+                    {
+                        return adj6;
+                        break;
+                    }
+                default:
+                    {
+                        return null;
+                        break;
+                    }
+            }
+        }
         private void adjTimer_Tick(object sender, EventArgs e)
         {
-            MainScen mainScen = new MainScen();
-
-            if (mainScen.problemSolved())
+           // if (mainScen.problemSolved())
             {
                 r1 = rand1.Next(180, 190);
                 r2 = rand1.Next(180, 190);
@@ -54,11 +103,24 @@ namespace WindowsFormsApp1
                 adj5.Location = new Point(520, 351 - r5);
                 adj6.Location = new Point(608, 351 - r6);
             }
-            else
+        //    else
             {
                 // ΚΩΔΙΚΑΣ ΜΕ ΠΡΟΒΛΗΜΑΤΙΚΕΣ ΡΥΘΜΙΣΕΙΣ ....... !!!!!!!!!!!!!!!!!! 
             }
             
+        }
+
+        private void SystemAdjustments_KeyDown(object sender, KeyEventArgs key)
+        {
+            switch (key.KeyCode)
+            {
+                case Keys.Escape:
+                    {
+                        this.Hide();
+                        frmMCS.Show();
+                        break;
+                    }
+            }
         }
     }
 }

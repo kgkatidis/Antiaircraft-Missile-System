@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bibliography.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliography.Designer.cs">
+      <DependentUpon>Bibliography.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="SystemAdjustments.cs">
       <SubType>Form</SubType>
@@ -61,11 +67,11 @@
     <Compile Include="ConfigurationManagement.Designer.cs">
       <DependentUpon>ConfigurationManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaintenanceContrrolSystem.cs">
+    <Compile Include="MaintenanceControlSystem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MaintenanceContrrolSystem.Designer.cs">
-      <DependentUpon>MaintenanceContrrolSystem.cs</DependentUpon>
+    <Compile Include="MaintenanceControlSystem.Designer.cs">
+      <DependentUpon>MaintenanceControlSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="TacticalScenarios.cs">
       <SubType>Form</SubType>
@@ -87,11 +93,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bibliography.resx">
+      <DependentUpon>Bibliography.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfigurationManagement.resx">
       <DependentUpon>ConfigurationManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MaintenanceContrrolSystem.resx">
-      <DependentUpon>MaintenanceContrrolSystem.cs</DependentUpon>
+    <EmbeddedResource Include="MaintenanceControlSystem.resx">
+      <DependentUpon>MaintenanceControlSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemAdjustments.resx">
       <DependentUpon>SystemAdjustments.cs</DependentUpon>

@@ -1564,6 +1564,7 @@
             this.Controls.Add(this.adj2);
             this.Name = "SystemAdjustments";
             this.Text = "System Adjustments";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SystemAdjustments_KeyDown);
             this.ResumeLayout(false);
 
         }
@@ -1696,5 +1697,5 @@
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.Timer adjTimer;
-    }
+        }
 }

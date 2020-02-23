@@ -11,13 +11,26 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
 
-    public partial class MaintenanceContrrolSystem : Form
+    public partial class MaintenanceControlSystem : Form
     {
         int dtStop = 0;
+        private MainScen mainScen;
+        private Form frmCM;
+        private Form frmSA;
 
-        public MaintenanceContrrolSystem()
+        public MaintenanceControlSystem()
         {
             InitializeComponent();
+            mainScen = new MainScen();
+
+            frmCM = new ConfigurationManagement(mainScen);
+            frmSA = new SystemAdjustments(mainScen);
+
+        }
+        public MaintenanceControlSystem(MainScen mS)
+        {
+            InitializeComponent();
+            mainScen = mS;
 
         }
 
@@ -59,8 +72,8 @@ namespace WindowsFormsApp1
                     if (this.checkedListBox1.GetItemChecked(1))
                     {
                         this.Hide();
-                        var frm = new ConfigurationManagement();
-                        frm.Show();
+                        var frmCM = new ConfigurationManagement(mainScen);
+                        frmCM.Show();
                     }
                     else if (this.checkedListBox1.GetItemChecked(0))
                     {
@@ -74,11 +87,11 @@ namespace WindowsFormsApp1
                         diagnosticsTimer.Start();
                         diagnosticsTimer.Enabled = true;
                     }
-                    else
+                    else  // this.checkedListBox1.GetItemChecked(2)
                     {
                         this.Hide();
-                        var frm = new SystemAdjustments();
-                        frm.Show();
+                        var frmSA = new SystemAdjustments(mainScen);
+                            frmSA.Show();
                     }
                 }
             }
@@ -97,7 +110,6 @@ namespace WindowsFormsApp1
             else
             {
                 diagnosticsTimer.Stop();
-                MainScen mainScen = new MainScen();
                 this.checkMsg.Text = "Diagnosted a Problem in ";
                 switch (mainScen.getProblem())
                 {
@@ -109,6 +121,7 @@ namespace WindowsFormsApp1
                     case 1:
                         {
                             this.checkMsg.Text += "Command Station";
+
                             break;
                         }
                     case 2:
