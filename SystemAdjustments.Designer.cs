@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.horizontalAxe = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -161,61 +161,73 @@
             // 
             this.adj2.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.adj2.BackColor = System.Drawing.Color.Lime;
+            this.adj2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adj2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adj2.Location = new System.Drawing.Point(342, 226);
             this.adj2.Name = "adj2";
             this.adj2.Size = new System.Drawing.Size(10, 206);
             this.adj2.TabIndex = 22;
+            this.adj2.Click += new System.EventHandler(this.adj2_Click);
             // 
             // adj1
             // 
             this.adj1.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.adj1.BackColor = System.Drawing.Color.Lime;
+            this.adj1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adj1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adj1.Location = new System.Drawing.Point(224, 226);
             this.adj1.Name = "adj1";
             this.adj1.Size = new System.Drawing.Size(10, 206);
             this.adj1.TabIndex = 24;
+            this.adj1.Click += new System.EventHandler(this.adj1_Click);
             // 
             // adj3
             // 
             this.adj3.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.adj3.BackColor = System.Drawing.Color.Lime;
+            this.adj3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adj3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adj3.Location = new System.Drawing.Point(455, 226);
             this.adj3.Name = "adj3";
             this.adj3.Size = new System.Drawing.Size(10, 206);
             this.adj3.TabIndex = 25;
+            this.adj3.Click += new System.EventHandler(this.adj3_Click);
             // 
             // adj4
             // 
             this.adj4.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.adj4.BackColor = System.Drawing.Color.Lime;
+            this.adj4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adj4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adj4.Location = new System.Drawing.Point(567, 226);
             this.adj4.Name = "adj4";
             this.adj4.Size = new System.Drawing.Size(10, 206);
             this.adj4.TabIndex = 26;
+            this.adj4.Click += new System.EventHandler(this.adj4_Click);
             // 
             // adj5
             // 
             this.adj5.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.adj5.BackColor = System.Drawing.Color.Lime;
+            this.adj5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adj5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adj5.Location = new System.Drawing.Point(696, 226);
             this.adj5.Name = "adj5";
             this.adj5.Size = new System.Drawing.Size(10, 206);
             this.adj5.TabIndex = 27;
+            this.adj5.Click += new System.EventHandler(this.adj5_Click);
             // 
             // adj6
             // 
             this.adj6.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.adj6.BackColor = System.Drawing.Color.Lime;
+            this.adj6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adj6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adj6.Location = new System.Drawing.Point(814, 226);
             this.adj6.Name = "adj6";
             this.adj6.Size = new System.Drawing.Size(10, 206);
             this.adj6.TabIndex = 28;
+            this.adj6.Click += new System.EventHandler(this.adj6_Click);
             // 
             // label1
             // 
@@ -249,15 +261,15 @@
             this.label9.Size = new System.Drawing.Size(10, 561);
             this.label9.TabIndex = 31;
             // 
-            // label10
+            // horizontalAxe
             // 
-            this.label10.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.label10.BackColor = System.Drawing.Color.Green;
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(66, 432);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(851, 10);
-            this.label10.TabIndex = 32;
+            this.horizontalAxe.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
+            this.horizontalAxe.BackColor = System.Drawing.Color.Green;
+            this.horizontalAxe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.horizontalAxe.Location = new System.Drawing.Point(66, 432);
+            this.horizontalAxe.Name = "horizontalAxe";
+            this.horizontalAxe.Size = new System.Drawing.Size(851, 10);
+            this.horizontalAxe.TabIndex = 32;
             // 
             // label29
             // 
@@ -1429,6 +1441,7 @@
             // 
             // adjTimer
             // 
+            this.adjTimer.Interval = 500;
             this.adjTimer.Tick += new System.EventHandler(this.adjTimer_Tick);
             // 
             // SystemAdjustments
@@ -1552,7 +1565,7 @@
             this.Controls.Add(this.label44);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label46);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.horizontalAxe);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
@@ -1580,7 +1593,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label horizontalAxe;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;

@@ -110,29 +110,55 @@ namespace WindowsFormsApp1
             else
             {
                 diagnosticsTimer.Stop();
-                this.checkMsg.Text = "Diagnosted a Problem in ";
-                switch (mainScen.getProblem())
+                if (mainScen.problemSolved())
                 {
-                    case 0:
-                        {
-                            this.checkMsg.Text += "Radar System";
-                            break;
-                        }
-                    case 1:
-                        {
-                            this.checkMsg.Text += "Command Station";
-
-                            break;
-                        }
-                    case 2:
-                        {
-                            this.checkMsg.Text += "Launching System";
-                            break;
-                        }
+                    this.checkMsg.Text = "The System is ready to fire!";
+                    this.checkMsg.Visible = true;
                 }
-                this.checkMsg.Text += "\r\n Go Back to configure your System or get extra information \r\n from system adjustments";
-                this.checkMsg.Visible = true;
+                else
+                {
+                    this.checkMsg.Text = "Diagnosted a Problem in ";
+                    if (mainScen.getProblem() <= 6)
+                    {
+                        this.checkMsg.Text += "Radar System";
+                        if (mainScen.getProblem() == 3 || mainScen.getProblem() == 4)
+                        {
+                            this.checkMsg.Text += " (TWT1) ";
+                        }
+                        else if (mainScen.getProblem() == 5 || mainScen.getProblem() == 6)
+                        {
+                            this.checkMsg.Text += " (TWT2) ";
+                        }
+                    }
+                    else if (mainScen.getProblem() <= 8)
+                    {
+                        this.checkMsg.Text += "Command Station";
+                        if (mainScen.getProblem() == 8)
+                        {
+                            this.checkMsg.Text += " (Circuit Card Assy) ";
+                        }
+                    }
+                    else
+                    {
+                        this.checkMsg.Text += "Launching System";
+                        if (mainScen.getProblem() <= 12)
+                        {
+                            this.checkMsg.Text += " (Power Supply) ";
+                        }
+                    }
+
+                    this.checkMsg.Text += "\r\n Go Back to configure your System or get extra information \r\n from system adjustments";
+                    this.checkMsg.Visible = true;
+                }
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var frmMCS = new MaintenanceControlSystem();
+            this.Hide();
+            frmMCS.Show();
         }
     }
 }

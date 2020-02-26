@@ -118,6 +118,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(436, 551);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
@@ -128,6 +129,7 @@
             // 
             // twtQ
             // 
+            this.twtQ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.twtQ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.twtQ.Font = new System.Drawing.Font("MS Reference Sans Serif", 44F);
             this.twtQ.ForeColor = System.Drawing.Color.Lime;
@@ -139,7 +141,6 @@
             this.twtQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.twtQ.Click += new System.EventHandler(this.label1_Click);
             this.twtQ.MouseLeave += new System.EventHandler(this.removeTwtText);
-            this.twtQ.MouseHover += new System.EventHandler(this.addTwtText);
             // 
             // label2
             // 
@@ -167,6 +168,7 @@
             // 
             // psQ
             // 
+            this.psQ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.psQ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.psQ.Font = new System.Drawing.Font("MS Reference Sans Serif", 44F);
             this.psQ.ForeColor = System.Drawing.Color.Lime;
@@ -194,6 +196,7 @@
             // 
             // ccaQ
             // 
+            this.ccaQ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ccaQ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ccaQ.Font = new System.Drawing.Font("MS Reference Sans Serif", 44F);
             this.ccaQ.ForeColor = System.Drawing.Color.Lime;
@@ -252,6 +255,7 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "ConfigurationManagement";
             this.Text = "Configuration Management";
             this.ResumeLayout(false);

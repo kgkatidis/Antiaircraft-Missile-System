@@ -8,14 +8,14 @@ namespace WindowsFormsApp1
 {
     public class MainScen
     {
-        public int problem;
-        public Boolean solved;
-        public Random rand;
+        private int problem;
+        private Boolean solved;
+        private Random rand;
 
         public MainScen()
         {
             rand = new Random();
-            problem = rand.Next(0, 2);             // a random problem to solve the technician
+            problem = rand.Next(0, 13);             // a random problem to solve the technician
             solved = false;
         }
         public int getProblem()
@@ -25,6 +25,10 @@ namespace WindowsFormsApp1
         public bool problemSolved()
         {
             return solved;
+        }
+        public void solveProblem()
+        {
+            solved = true;
         }
     }
 }

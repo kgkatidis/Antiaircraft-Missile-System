@@ -41,6 +41,7 @@
             // 
             this.maintenanceCheck.AutoSize = true;
             this.maintenanceCheck.BackColor = System.Drawing.SystemColors.WindowText;
+            this.maintenanceCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maintenanceCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maintenanceCheck.ForeColor = System.Drawing.Color.Lime;
             this.maintenanceCheck.Location = new System.Drawing.Point(440, 325);
@@ -53,6 +54,7 @@
             // tacticalCheck
             // 
             this.tacticalCheck.AutoSize = true;
+            this.tacticalCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tacticalCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tacticalCheck.ForeColor = System.Drawing.Color.Lime;
             this.tacticalCheck.Location = new System.Drawing.Point(440, 256);
@@ -98,6 +100,7 @@
             // 
             // sureBtn
             // 
+            this.sureBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sureBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Bold);
             this.sureBtn.Location = new System.Drawing.Point(430, 552);
             this.sureBtn.Name = "sureBtn";

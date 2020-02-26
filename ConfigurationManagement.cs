@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class ConfigurationManagement : Form
     {
         private MainScen mainScen;
+        private MaintenanceControlSystem frmMCS;
         public ConfigurationManagement()
         {
             InitializeComponent();
@@ -21,17 +22,46 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             mainScen = mS;
+            frmMCS = new MaintenanceControlSystem(mainScen);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.button1.Text == "Update")
+            if ((this.button1.Text == "Update") && (comboBox1.SelectedIndex > -1 || comboBox2.SelectedIndex > -1 || comboBox3.SelectedIndex > -1))
             {
                 this.button1.Text = "Validate";
                 this.label4.Text = null;
             }
-        }
+            else if (this.button1.Text == "Validate")
+            {
+                if (mainScen.getProblem() == 3 || mainScen.getProblem() == 4)
+                {
+                    if (comboBox1.SelectedIndex < 4)                     // TWT1 Serial Numbers
+                    {
+                        mainScen.solveProblem();
+                    }
+                }
+                else if (mainScen.getProblem() == 5 || mainScen.getProblem() == 6)
+                {
+                    if (comboBox1.SelectedIndex > 3)                      // TWT2 Serial Numbers
+                    {
+                        mainScen.solveProblem();
+                    }
+                }
+                else if (mainScen.getProblem() == 8 && comboBox3.SelectedIndex > -1)   // all Power Supplies are similar
+                {
+                    mainScen.solveProblem();
+                }
 
+                else if (mainScen.getProblem() > 10 && comboBox2.SelectedIndex > 3)   // index 4 and above are CCAs after implementation
+                {
+                    mainScen.solveProblem();
+                }
+                
+                this.Hide();
+                frmMCS.Show();
+            }
+        }
        
         private void removeTwtText(object sender, EventArgs e)
         {
@@ -82,5 +112,6 @@ namespace WindowsFormsApp1
         {
             // NA PROSTE8OUN TA APO PANW KAI NA MPEI KAI H ANTISTOIXH BIBLIOGRAFIA
         }
+    
     }
 }

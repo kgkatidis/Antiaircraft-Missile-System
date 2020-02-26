@@ -133,6 +133,7 @@
             // 
             // startGameBtn
             // 
+            this.startGameBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startGameBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startGameBtn.ForeColor = System.Drawing.Color.Black;
             this.startGameBtn.Location = new System.Drawing.Point(429, 354);
