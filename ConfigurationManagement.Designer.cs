@@ -141,6 +141,7 @@
             this.twtQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.twtQ.Click += new System.EventHandler(this.label1_Click);
             this.twtQ.MouseLeave += new System.EventHandler(this.removeTwtText);
+            this.twtQ.MouseHover += new System.EventHandler(this.addTwtText);
             // 
             // label2
             // 
@@ -258,6 +259,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "ConfigurationManagement";
             this.Text = "Configuration Management";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConfigurationManagement_KeyDown);
             this.ResumeLayout(false);
 
         }

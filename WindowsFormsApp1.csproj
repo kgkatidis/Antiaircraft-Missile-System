@@ -53,7 +53,21 @@
     <Compile Include="Bibliography.Designer.cs">
       <DependentUpon>Bibliography.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
+    <Compile Include="FlyingObj.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="TacticalTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacticalTrain.Designer.cs">
+      <DependentUpon>TacticalTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacticalTraining.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacticalTraining.Designer.cs">
+      <DependentUpon>TacticalTraining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper%28%29.cs" />
     <Compile Include="SystemAdjustments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +87,7 @@
     <Compile Include="MaintenanceControlSystem.Designer.cs">
       <DependentUpon>MaintenanceControlSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="TacScen.cs" />
     <Compile Include="TacticalScenarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigurationManagement.resx">
       <DependentUpon>ConfigurationManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacticalTrain.resx">
+      <DependentUpon>TacticalTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacticalTraining.resx">
+      <DependentUpon>TacticalTraining.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceControlSystem.resx">
       <DependentUpon>MaintenanceControlSystem.cs</DependentUpon>

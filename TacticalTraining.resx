@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="general1.Text" xml:space="preserve">
-    <value>    A traveling-wave tube (TWT, pronounced "twit") is a specialized vacuum tube that is used in electronics to amplify radio frequency (RF) signals in the microwave range. The TWT belongs to a category of "linear beam" tubes, such as the klystron, in which the radio wave is amplified by absorbing power from a beam of electrons as it passes down the tube.</value>
-  </data>
 </root>

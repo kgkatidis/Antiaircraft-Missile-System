@@ -100,18 +100,39 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
             var frmB = new Bibliography(mainScen);
+            frmB.showWordPackage(1);
             this.Hide();
             frmB.Show();
+
         }
         private void psQ_Click(object sender, EventArgs e)
         {
-            // NA PROSTE8OUN TA APO PANW KAI NA MPEI KAI H ANTISTOIXH BIBLIOGRAFIA
+            var frmB = new Bibliography(mainScen);
+            frmB.showWordPackage(2);
+            this.Hide();
+            frmB.Show();
+
         }
 
         private void ccaQ_Click(object sender, EventArgs e)
         {
-            // NA PROSTE8OUN TA APO PANW KAI NA MPEI KAI H ANTISTOIXH BIBLIOGRAFIA
+            var frmB = new Bibliography(mainScen);
+            frmB.showWordPackage(3);
+            this.Hide();
+            frmB.Show();
         }
-    
+
+        private void ConfigurationManagement_KeyDown(object sender, KeyEventArgs key)
+        {
+            switch (key.KeyCode)
+            {
+                case Keys.Escape:
+                    {
+                        this.Hide();
+                        frmMCS.Show();
+                        break;
+                    }
+            }
+        }
     }
 }
