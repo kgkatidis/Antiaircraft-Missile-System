@@ -42,6 +42,7 @@
             this.ccaQ = new System.Windows.Forms.Label();
             this.infoText = new System.Windows.Forms.Label();
             this.twtText = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -119,7 +120,7 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(436, 551);
+            this.button1.Location = new System.Drawing.Point(515, 551);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 30;
@@ -236,12 +237,24 @@
             this.twtText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.twtText.Visible = false;
             // 
+            // backBtn
+            // 
+            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backBtn.Location = new System.Drawing.Point(424, 551);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 31);
+            this.backBtn.TabIndex = 39;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // ConfigurationManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(1006, 681);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.twtText);
             this.Controls.Add(this.infoText);
             this.Controls.Add(this.label7);
@@ -259,7 +272,6 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "ConfigurationManagement";
             this.Text = "Configuration Management";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConfigurationManagement_KeyDown);
             this.ResumeLayout(false);
 
         }
@@ -280,5 +292,6 @@
         private System.Windows.Forms.Label ccaQ;
         private System.Windows.Forms.Label infoText;
         private System.Windows.Forms.Label twtText;
+        private System.Windows.Forms.Button backBtn;
     }
 }

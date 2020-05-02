@@ -48,12 +48,12 @@ namespace WindowsFormsApp1
                         mainScen.solveProblem();
                     }
                 }
-                else if (mainScen.getProblem() == 8 && comboBox3.SelectedIndex > -1)   // all Power Supplies are similar
+                else if (mainScen.getProblem() == 8 && comboBox2.SelectedIndex > -1)   // all Power Supplies are similar
                 {
                     mainScen.solveProblem();
                 }
 
-                else if (mainScen.getProblem() > 10 && comboBox2.SelectedIndex > 3)   // index 4 and above are CCAs after implementation
+                else if (mainScen.getProblem() > 10 && comboBox3.SelectedIndex > 3)   // index 4 and above are CCAs after implementation
                 {
                     mainScen.solveProblem();
                 }
@@ -122,17 +122,10 @@ namespace WindowsFormsApp1
             frmB.Show();
         }
 
-        private void ConfigurationManagement_KeyDown(object sender, KeyEventArgs key)
+        private void backBtn_Click(object sender, EventArgs e)
         {
-            switch (key.KeyCode)
-            {
-                case Keys.Escape:
-                    {
-                        this.Hide();
-                        frmMCS.Show();
-                        break;
-                    }
-            }
+            this.Hide();
+            frmMCS.Show();
         }
     }
 }

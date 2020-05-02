@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
     public class FlyingObj
     {
-        private int altitude;
+        private int r;
         private Random rand = new Random();
         private bool alive;
         private Bitmap bitmap;
@@ -18,84 +19,78 @@ namespace WindowsFormsApp1
         private int Y;
         private Size size;
         Helper helper;
+        private bool friend;
+        private int timeToFire;
+
 
 
 
         public FlyingObj()
         {
-            X = rand.Next(100,900);
-            Y = rand.Next(50,150);
+            timeToFire = 10;
+            X = rand.Next(100, 900);
+            Y = rand.Next(50, 150);
+            if (rand.Next(10)>7)
+            {
+                friend = true;
+            }
+            else
+            {
+                friend = false;
+            }
+                
         }
-
-        public bool Alive
+        public bool getIFF()
         {
-            get { return alive; }
-            set { alive = value; }
+            return friend;
         }
 
-        public Bitmap Image
+        public int TimeToFire
         {
-            get { return bitmap; }
-            set { bitmap = value; }
+            get { return timeToFire; }
+            set { timeToFire = value; }
         }
-
-        public int XX
+        public int X_Axes
         {
             get { return X; }
             set { X = value; }
         }
-
-        public int YY
+        public int Y_Axes
         {
             get { return Y; }
             set { Y = value; }
         }
 
-        public Size Size
+        public void Move()
         {
-            get { return size; }
-            set { size = value; }
-        }
-
-        public int Width
-        {
-            get { return size.Width; }
-            set { size.Width = value; }
-        }
-
-        public int Height
-        {
-            get { return size.Height; }
-            set { size.Height = value; }
-        }
-
-        public void Draw()
-        {
-            Rectangle frame = new Rectangle();
-            frame.X = X;
-            frame.Y = Y;
-            frame.Width = size.Width;
-            frame.Height = size.Height;
-            helper.Device.DrawImage(bitmap, Bounds, frame, GraphicsUnit.Pixel);
-        }
-
-        //returns bounding rectangle around sprite 
-        public Rectangle Bounds
-        {
-            get
+            r = rand.Next(10);
+            if (r==1)
             {
-                Rectangle rect = new Rectangle(
-                    (int)X, (int)Y,
-                    size.Width, size.Height);
-                return rect;
+                // turn right
+                if(X>100)
+                {
+                    this.X-=4;
+                }
             }
+            else if (r == 2)
+            {
+                // turn left
+                if (X < 900)
+                {
+                    this.X+=4;
+                }
+            }
+            else if (r>7)
+            {
+                //go ahead
+                this.Y+=5;
+            }
+
         }
 
-        public bool IsColliding(ref FlyingObj other)
+        internal void Dispose()
         {
-            //test for bounding rectangle collision
-            bool collision = Bounds.IntersectsWith(other.Bounds);
-            return collision;
+            this.Dispose();
         }
     }
 }

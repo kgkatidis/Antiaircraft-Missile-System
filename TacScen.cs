@@ -20,7 +20,10 @@ namespace WindowsFormsApp1
         private Font p_font;
         private int v1;
         private int v2;
-        
+        private TacticalTrain tt;
+        private int width;
+        private int height;
+
         public TacScen(ref Form form, int width, int height)
         {
             Trace.WriteLine("Game class constructor");
@@ -43,6 +46,14 @@ namespace WindowsFormsApp1
             //set the default font
             SetFont("Arial", 18, FontStyle.Regular);
         }
+
+        public TacScen(ref TacticalTrain tt, int width, int height)
+        {
+            this.tt = tt;
+            this.width = width;
+            this.height = height;
+        }
+
         ~TacScen()
         {
             Trace.WriteLine("Game class destructor");

@@ -54,6 +54,12 @@
       <DependentUpon>Bibliography.cs</DependentUpon>
     </Compile>
     <Compile Include="FlyingObj.cs" />
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sprite.cs" />
     <Compile Include="TacticalTrain.cs">
       <SubType>Form</SubType>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigurationManagement.resx">
       <DependentUpon>ConfigurationManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TacticalTrain.resx">
       <DependentUpon>TacticalTrain.cs</DependentUpon>
