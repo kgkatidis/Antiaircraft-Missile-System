@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
     {
         private int scenNumber;
         private bool gameOver;
+        private PictureBox collieded;
         private bool fault;
         private bool biggerScore;
         private bool smallerScore;
@@ -30,7 +31,8 @@ namespace WindowsFormsApp1
         List<FlyingObj> planes;
         List<PictureBox> planePictures;
         int score;
-
+        PictureBox pbcol;
+        PictureBox backUpTarget;
 
         public TacticalTrain()
         {
@@ -39,10 +41,14 @@ namespace WindowsFormsApp1
 
         public TacticalTrain(int i)
         {
+            pbcol = new PictureBox(); ///////////////////////////////////
+            backUpTarget = new PictureBox();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             InitializeComponent();
             scenNumber = i;
             gameOver = false;
             fault = false;
+            collieded = null;
             biggerScore = false;
             smallerScore = false;
             canKill = true;
@@ -110,8 +116,9 @@ namespace WindowsFormsApp1
             target.Size = new System.Drawing.Size(32, 32);
 
             target.BackColor = Color.Transparent;
-            target.Image = helper.LoadBitmap("Target.png");
+            target.Image = helper.LoadBitmap("Target.png",1);
             Controls.Add(target);
+            backUpTarget = target;
             Main();
         }
 
@@ -163,16 +170,7 @@ namespace WindowsFormsApp1
             }
             updateScore();
 
-            foreach (PictureBox pb1 in planePictures)
-            {
-                foreach (PictureBox pb2 in planePictures)
-                {
-                    if (pb1.Location!=pb2.Location)
-                    {
-                        Helper.OverlayPictures(pb1,pb2);
-                    }
-                }
-            }
+         
         }
         private void CheckForFault()
         {
@@ -218,7 +216,16 @@ namespace WindowsFormsApp1
 
         private void moveTarget()
         {
-            target.Location = new System.Drawing.Point(MousePosition.X-150,MousePosition.Y-150);
+            if (target == backUpTarget)
+            {
+                target.Location = new System.Drawing.Point(MousePosition.X - 150, MousePosition.Y - 150);
+                backUpTarget.Location = target.Location;
+            }
+            else
+            {
+                pbcol.Location = new System.Drawing.Point(MousePosition.X - 150, MousePosition.Y - 150);
+                backUpTarget.Location = pbcol.Location;
+            }
         }
 
         private void CheckForNewPlanes(int i)
@@ -233,13 +240,13 @@ namespace WindowsFormsApp1
                 p.Size = new System.Drawing.Size(32, 32);
               
                 p.BackColor = Color.Transparent;
-                p.Image = helper.LoadBitmap("PlaneFront.png");
+                p.Image = helper.LoadBitmap("PlaneFront.png",1);
                 Controls.Add(p);
                 
-       //         p.Parent = target;
-
                 planes.Add(fO);
                 planePictures.Add(p);
+                
+               
 
                 
 
@@ -340,8 +347,59 @@ namespace WindowsFormsApp1
         private void timer1_Tick(object sender, EventArgs e)
         {
             moveTarget();
+            if (!gameOver)
+            {
+                checkCollisions();
+            }
+        }
 
-           
+        private void checkCollisions()
+        {
+            foreach (PictureBox p in planePictures)
+            {
+                
+                if (Math.Abs(p.Location.X - backUpTarget.Location.X) < p.Width && Math.Abs(p.Location.Y - backUpTarget.Location.Y) < p.Height)
+                {
+                 //   p.BringToFront();
+                    collieded = p;
+                    //     target.BackColor = Color.Transparent;
+                    //    target.Parent = p;
+                    //   target.Location = new Point(p.Location.X,p.Location.Y);
+
+                    if (target == backUpTarget)
+                    {
+                        helper.imageConstruction(pbcol, 32, 32, target.Image, p.Image);
+
+                      
+
+                        pbcol.Location = target.Location;
+                        pbcol.BackColor = Color.Transparent;
+                        Controls.Add(pbcol);
+
+                        Controls.Remove(p);
+                        Controls.Remove(target);
+
+                        target = null;
+                    }
+                    gameOver = true;
+
+                }
+                else
+                {
+                    gameOver = false;
+
+                    collieded = null;
+                    //   p.SendToBack();
+
+                    if (target == null)
+                    {
+                        Controls.Remove(pbcol);
+                        Controls.Add(p);
+                        target = backUpTarget;
+                        Controls.Add(target);
+                    }
+                }
+            }
         }
 
         private void TacticalTrain_KeyDown(object sender, KeyEventArgs e)
@@ -364,5 +422,22 @@ namespace WindowsFormsApp1
             }
             
         }
+
+        private void TacticalTrain_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (collieded != null)
+            {
+                if (collieded.BackColor == Color.Tomato)
+                {
+                    collieded.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    collieded.BackColor = Color.Tomato;
+                }
+            }
+        }
+
+
     }
 }

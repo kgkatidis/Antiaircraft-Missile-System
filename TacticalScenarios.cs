@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -16,12 +9,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         //load Scenario ...
         private void radyToFightBtn_Click(object sender, EventArgs e)
         {
@@ -29,25 +17,25 @@ namespace WindowsFormsApp1
             if (checkedListBox1.GetItemCheckState(0) == CheckState.Checked)
             {
                 this.Hide();
-                TacticalTrain frm = new TacticalTrain(1);
+                TrainTactical frm = new TrainTactical(1);
                 frm.ShowDialog();
             }
             else if (checkedListBox1.GetItemCheckState(1) == CheckState.Checked)
             {
                 this.Hide();
-                TacticalTrain frm = new TacticalTrain(2);
+                TrainTactical frm = new TrainTactical(2);
                 frm.ShowDialog();
             }
             else if (checkedListBox1.GetItemCheckState(2) == CheckState.Checked)
             {
                 this.Hide();
-                TacticalTrain frm = new TacticalTrain(3);
+                TrainTactical frm = new TrainTactical(3);
                 frm.ShowDialog();
             }
             else if (checkedListBox1.GetItemCheckState(3) == CheckState.Checked)
             {
                 this.Hide();
-                TacticalTrain frm = new TacticalTrain(4);
+                TrainTactical frm = new TrainTactical(4);
                 frm.ShowDialog();
             }
         }

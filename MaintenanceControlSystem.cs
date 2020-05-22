@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -25,13 +19,11 @@ namespace WindowsFormsApp1
 
             frmCM = new ConfigurationManagement(mainScen);
             frmSA = new SystemAdjustments(mainScen);
-
         }
         public MaintenanceControlSystem(MainScen mS)
         {
             InitializeComponent();
             mainScen = mS;
-
         }
 
         public void setSomething(int a, int  b)
@@ -42,8 +34,7 @@ namespace WindowsFormsApp1
         private void runBtn_Click(object sender, EventArgs e)
         {
             // End of diagnostics runninng
-
-            if (this.runBtn.Text == "Back")    // SOS ΝΑ ΜΠΕΙ ΧΡΟΝΟΜΕΤΡΗΣΗ 
+            if (this.runBtn.Text == "Back")   
             {
                 this.checkMsg.Visible = false;
                 this.title.Text = "Maintenance Control System Training";
@@ -100,8 +91,9 @@ namespace WindowsFormsApp1
         private void diagnosticsTimer_Tick(object sender, EventArgs e)
         {
             dtStop++;
-            if (dtStop < 4)
+            if (dtStop < 10)
             {
+                // flashing text 
                 if (this.checkMsg.Visible == false)
                     this.checkMsg.Visible = true;
                 else
@@ -154,6 +146,7 @@ namespace WindowsFormsApp1
 
         }
 
+        // Restart (New Scenario)
         private void button1_Click(object sender, EventArgs e)
         {
             var frmMCS = new MaintenanceControlSystem();

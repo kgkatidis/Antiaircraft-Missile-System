@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -13,12 +7,8 @@ namespace WindowsFormsApp1
     {
         private int r;
         private Random rand = new Random();
-        private bool alive;
-        private Bitmap bitmap;
         private int X;
         private int Y;
-        private Size size;
-        Helper helper;
         private bool friend;
         private int timeToFire;
 
@@ -27,8 +17,8 @@ namespace WindowsFormsApp1
 
         public FlyingObj()
         {
-            timeToFire = 10;
-            X = rand.Next(100, 900);
+            timeToFire = 100;
+            X = rand.Next(100, 800);
             Y = rand.Next(50, 150);
             if (rand.Next(10)>7)
             {
@@ -80,17 +70,21 @@ namespace WindowsFormsApp1
                     this.X+=4;
                 }
             }
-            else if (r>7)
+            else if (r>3)
             {
                 //go ahead
-                this.Y+=5;
+                this.Y+=7;
             }
 
         }
-
-        internal void Dispose()
+        public void timeDown()
         {
-            this.Dispose();
+            timeToFire--;
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
     }
 }

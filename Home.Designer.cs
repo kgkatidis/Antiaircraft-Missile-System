@@ -32,7 +32,6 @@
             this.tacticalCheck = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.sureBtn = new System.Windows.Forms.Button();
             this.checkMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -87,17 +86,6 @@
             this.label5.Text = "Ready for Training?";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LawnGreen;
-            this.label1.Location = new System.Drawing.Point(29, -47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(759, 53);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Antiaircraft Missile System";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // sureBtn
             // 
             this.sureBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -133,7 +121,6 @@
             this.Controls.Add(this.tacticalCheck);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.sureBtn);
             this.Name = "Home";
             this.Text = "Home";
@@ -148,7 +135,6 @@
         private System.Windows.Forms.CheckBox tacticalCheck;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button sureBtn;
         private System.Windows.Forms.Label checkMsg;
     }

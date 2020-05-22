@@ -60,20 +60,8 @@
     <Compile Include="GameOver.Designer.cs">
       <DependentUpon>GameOver.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sprite.cs" />
-    <Compile Include="TacticalTrain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TacticalTrain.Designer.cs">
-      <DependentUpon>TacticalTrain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TacticalTraining.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TacticalTraining.Designer.cs">
-      <DependentUpon>TacticalTraining.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helper%28%29.cs" />
+    <Compile Include="GamePlay.cs" />
+    <Compile Include="Asset.cs" />
     <Compile Include="SystemAdjustments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,12 +81,17 @@
     <Compile Include="MaintenanceControlSystem.Designer.cs">
       <DependentUpon>MaintenanceControlSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="TacScen.cs" />
     <Compile Include="TacticalScenarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TacticalScenarios.Designer.cs">
       <DependentUpon>TacticalScenarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainTactical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainTactical.Designer.cs">
+      <DependentUpon>TrainTactical.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -123,12 +116,6 @@
     <EmbeddedResource Include="GameOver.resx">
       <DependentUpon>GameOver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TacticalTrain.resx">
-      <DependentUpon>TacticalTrain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TacticalTraining.resx">
-      <DependentUpon>TacticalTraining.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceControlSystem.resx">
       <DependentUpon>MaintenanceControlSystem.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TacticalScenarios.resx">
       <DependentUpon>TacticalScenarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainTactical.resx">
+      <DependentUpon>TrainTactical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

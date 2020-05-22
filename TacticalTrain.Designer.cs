@@ -200,6 +200,7 @@
             this.Load += new System.EventHandler(this.TacticalTrain_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TacticalTrain_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TacticalTrain_KeyDown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TacticalTrain_MouseDown);
             this.statusBox.ResumeLayout(false);
             this.statusBox.PerformLayout();
             this.ResumeLayout(false);
